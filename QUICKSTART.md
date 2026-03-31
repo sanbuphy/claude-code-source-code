@@ -18,7 +18,7 @@ npm install -g .
 claude --version
 ```
 
-**Authentication required**: Set `ANTROPIC_API_KEY` or run `node cli.js login`.
+**Authentication required**: Set `ANTHROPIC_API_KEY` or run `node cli.js login`.
 
 ## Option B: Build from Source (Best Effort)
 

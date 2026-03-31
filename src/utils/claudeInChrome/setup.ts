@@ -193,7 +193,7 @@ export async function installChromeNativeHostManifest(
 ): Promise<void> {
   const manifestDirs = getNativeMessagingHostsDirs()
   if (manifestDirs.length === 0) {
-    throw Error('Claude in Chrome Native Host not supported on this platform')
+    throw new Error('Claude in Chrome Native Host not supported on this platform')
   }
 
   const manifest = {

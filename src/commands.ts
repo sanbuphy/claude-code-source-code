@@ -56,7 +56,7 @@ import terminalSetup from './commands/terminalSetup/index.js'
 import usage from './commands/usage/index.js'
 import theme from './commands/theme/index.js'
 import vim from './commands/vim/index.js'
-import { feature } from 'bun:bundle'
+import { feature } from '../stubs/bun-bundle.js'
 // Dead code elimination: conditional imports
 /* eslint-disable @typescript-eslint/no-require-imports */
 const proactive =
@@ -704,7 +704,7 @@ export function hasCommand(commandName: string, commands: Command[]): boolean {
 export function getCommand(commandName: string, commands: Command[]): Command {
   const command = findCommand(commandName, commands)
   if (!command) {
-    throw ReferenceError(
+    throw new ReferenceError(
       `Command ${commandName} not found. Available commands: ${commands
         .map(_ => {
           const name = getCommandName(_)
